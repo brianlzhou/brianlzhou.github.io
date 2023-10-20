@@ -127,6 +127,22 @@
 
 a { text-decoration: none; }
 
+a:link {
+  color: var(--orange-yellow-crayola);
+}
+
+a:visited {
+  color: orange;
+}
+
+a:hover {
+  color: gold;
+}
+
+a:active {
+  color: goldenrod;
+}
+
 li { list-style: none; }
 
 img, ion-icon, a, button, time, span { display: block; }
