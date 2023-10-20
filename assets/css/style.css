@@ -143,7 +143,11 @@ a:active {
   color: goldenrod;
 }
 
-li { list-style: none; }
+/* li { list-style: none; }
+
+ul.b {
+  list-style-position: inside;
+} */
 
 img, ion-icon, a, button, time, span { display: block; }
 
