@@ -743,6 +743,69 @@ main {
 }
 
 
+/* 
+ * #popups
+ */
+
+/* Popup styling */
+
+.trigger-text {
+  display: inline-block; /* This will make the trigger text inline with other text */
+  cursor: pointer; /* Changes the cursor to indicate it's clickable */
+  color: var(--orange-yellow-crayola);
+}
+
+/* Additional styling for when the mouse hovers over the trigger text */
+.trigger-text:hover {
+  text-decoration: none; /* You can change the styling on hover if desired */
+}
+
+.popup {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Popup Content */
+.popup-content {
+  background-color: var(--onyx); /* Use variable from your CSS */
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  box-shadow: 0 4px 8px 0 var(--border-gradient-onyx);
+  animation: fadeIn 0.5s;
+  border-radius: 10px;
+}
+
+/* Add Animation */
+@keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+/* The Close Button */
+.popup-close {
+  color: var(--light-gray);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.popup-close:hover,
+.popup-close:focus {
+  color: var(--light-gray);
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /**
  * #clients 
  */

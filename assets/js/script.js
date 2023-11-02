@@ -33,6 +33,31 @@ const testimonialsModalFunc = function () {
   overlay.classList.toggle("active");
 }
 
+// Function to show the popup
+function showPopup(event) {
+  const popupId = event.target.getAttribute('data-popup-target');
+  const popup = document.getElementById(popupId);
+  popup.style.display = 'block';
+}
+
+// Function to hide the popup
+function hidePopup(event) {
+  // If the clicked element has the 'popup-close' class or is the overlay, hide the parent popup
+  if (event.target.classList.contains('popup-close') || event.target.classList.contains('popup')) {
+    event.target.closest('.popup').style.display = 'none';
+  }
+}
+
+// Attaching the showPopup function to all trigger texts
+document.querySelectorAll('.trigger-text').forEach(item => {
+  item.addEventListener('click', showPopup);
+});
+
+// Attaching the hidePopup function to all close buttons and to the popup overlay itself
+document.querySelectorAll('.popup, .popup-close').forEach(item => {
+  item.addEventListener('click', hidePopup);
+});
+
 // add click event to all modal items
 for (let i = 0; i < testimonialsItem.length; i++) {
 
