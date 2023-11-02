@@ -149,7 +149,8 @@ li { list-style: none; }
   list-style-position: inside;
 } */
 
-img, ion-icon, a, button, time, span { display: block; }
+/* previously was block */
+img, ion-icon, a, button, time, span { display: inline-block; }
 
 button {
   font: inherit;
