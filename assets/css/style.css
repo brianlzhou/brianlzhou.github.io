@@ -52,7 +52,13 @@
     to right, 
     hsl(45, 100%, 72%), 
     hsl(35, 100%, 68%)
-  );
+    );
+
+  --text-gradient-yellow-darker: linear-gradient(
+    to right, 
+    hsl(45, 100%, 52%), /* Darker yellow - 20% less lightness than the original */
+    hsl(35, 100%, 48%) /* Darker orange - 20% less lightness than the original */
+  );  
 
   /* solid */
 
@@ -1961,5 +1967,22 @@ textarea.form-input::-webkit-resizer { display: none; }
 	 */
 
   .timeline-text { max-width: 700px; }
+
+
+
+  /* Indent <summary> element */
+  summary {
+    margin-left: 10px; /* Adjust the value as needed for the desired indentation */
+  }
+
+  /* Change cursor and color on hover over <details> */
+  details:hover {
+    cursor: pointer; /* Change the cursor to the 'click' icon */
+    color: goldenrod; /* Change the color to blue, you can set any color you prefer */
+  }
+
+  details div {
+    margin-left: 25px; /* Adjust the value for the desired indentation of the content */
+  }
 
 }
