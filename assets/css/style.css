@@ -2015,7 +2015,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     box-sizing: border-box; /* Include padding in the box's dimensions */
     text-align: left; /* Align text to the left */
     overflow: hidden; /* Prevent text from overflowing */
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    background: rgba(0, 0, 0, 0.65); /* Semi-transparent black background */
     border-radius: 15px; 
     z-index: 10;
   }
