@@ -182,39 +182,43 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
-
-class Slider {
-  constructor(sliderElement) {
-    this.sliderElement = sliderElement;
-    this.slides = sliderElement.querySelectorAll('.slide');
-    this.totalSlides = this.slides.length;
-    this.slideIndex = 0;
-
-    // Start the slideshow
-    this.showSlides();
-  }
-
-  showSlides() {
-    // Hide all slides
-    this.slides.forEach(slide => {
-      slide.style.opacity = 0;
-    });
-
-    // Go to the next slide
-    this.slideIndex++;
-    if (this.slideIndex >= this.totalSlides) {
+(function() {
+  class Slider {
+    constructor(sliderElement) {
+      this.sliderElement = sliderElement;
+      this.slides = sliderElement.querySelectorAll('.slide');
+      this.totalSlides = this.slides.length;
       this.slideIndex = 0;
+
+      // Pre-bind the method to the current instance
+      this.showSlides = this.showSlides.bind(this);
+
+      // Start the slideshow
+      this.showSlides();
     }
 
-    // Show the next slide
-    this.slides[this.slideIndex].style.opacity = 1;
+    showSlides() {
+      // Hide all slides
+      this.slides.forEach(slide => {
+        slide.style.opacity = 0;
+      });
 
-    // Change slide every 10 seconds
-    setTimeout(() => this.showSlides(), 10000);
+      // Go to the next slide
+      this.slideIndex++;
+      if (this.slideIndex >= this.totalSlides) {
+        this.slideIndex = 0;
+      }
+
+      // Show the next slide
+      this.slides[this.slideIndex].style.opacity = 1;
+
+      // Change slide every 10 seconds
+      setTimeout(this.showSlides, 10000);
+    }
   }
-}
 
-document.addEventListener('DOMContentLoaded', () => {
-  const sliders = document.querySelectorAll('.slider');
-  sliders.forEach(slider => new Slider(slider));
-});
+  document.addEventListener('DOMContentLoaded', () => {
+    const sliders = document.querySelectorAll('.slider');
+    sliders.forEach(slider => new Slider(slider));
+  });
+})();
