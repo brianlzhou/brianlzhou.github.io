@@ -1985,4 +1985,84 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin-left: 25px; /* Adjust the value for the desired indentation of the content */
   }
 
+  .image-box {
+    position: relative;
+    width: 100%; /* Stretch to the full width of its container */
+    background-size: 100% auto; /* Stretch the background image to full width */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    border-radius: 15px; /* Rounded corners for the box */
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* text-align: center; */
+    margin-bottom: 20px; /* Space between boxes */
+    padding-top: 56.25%; /* For 16:9 aspect ratio: height/width*100% */
+    box-sizing: border-box;
+  }
+  
+  .overlay-text {
+    /* ... other styles ... */
+    position: absolute;
+    top: 0; /* Align to the top of the container */
+    left: 0;
+    right: 0;
+    bottom: 0; /* Align to the bottom of the container */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    padding: 20px; /* Add padding inside the overlay-text */
+    box-sizing: border-box; /* Include padding in the box's dimensions */
+    text-align: left; /* Align text to the left */
+    overflow: hidden; /* Prevent text from overflowing */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    border-radius: 15px; 
+    z-index: 10;
+  }
+
+  .slider {
+    position: relative;
+    width: 100%; /* Full width to expand to its container */
+    overflow: hidden; /* Hide the slides that overflow the width */
+    margin-bottom: 20px; /* Space between boxes */
+    border-radius: 15px; /* Rounded corners for the slider */
+    padding-top: 56.25%; /* For 16:9 aspect ratio: height/width*100% */
+    box-sizing: border-box;
+  }
+  
+  .slides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    transition: opacity 1s ease-in-out;
+    opacity: 0; /* Slides are invisible initially */
+  }
+  
+  .slide.active {
+    opacity: 1; /* Active slide is fully visible */
+  }
+  
+  .dynamic-overlay {
+    /* Inherits styles from .overlay-text */
+    opacity: 0; /* Dynamic text is invisible initially */
+    transition: opacity 1s ease-in-out; /* Fade effect */
+  }
+  
+  .dynamic-overlay.active {
+    opacity: 1; /* Active dynamic text is fully visible */
+  }
+  
 }
