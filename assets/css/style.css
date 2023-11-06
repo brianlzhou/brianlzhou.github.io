@@ -2018,7 +2018,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     background: rgba(0, 0, 0, 0.65); /* Semi-transparent black background */
     border-radius: 15px; 
     z-index: 10;
-    
+
     color: var(--light-gray);
     font-size: var(--fs-6);
     font-weight: var(--fw-300);
@@ -2069,5 +2069,5 @@ textarea.form-input::-webkit-resizer { display: none; }
   .dynamic-overlay.active {
     opacity: 1; /* Active dynamic text is fully visible */
   }
-  
+   
 }
