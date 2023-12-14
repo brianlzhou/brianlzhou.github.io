@@ -184,6 +184,54 @@
           
         </section>
 
+        <header>
+          <h2 class="h2 article-title">Summary</h2>
+        </header>
+
+        <section class="about-text">
+          <p>Autonomous underwater vehicles (AUVs) are versatile and inexpensive. Commercially, AUVs can map out subsea 
+            pipelines and internet cabling and monitor this critical undersea infrastructure. AUVs gather important 
+            data for scientists, using sensors to measure element concentrations or oceanic data. AUVs have also been 
+            used to clean oil spills and maintain ecosystem health. From a military perspective, UUVs (Unmanned 
+            underwater vehicles) are the future; inexpensive UUVs can sweep mines, inspect/identify vessels, and 
+            conduct reconnaissance/surveillance missions, all without risking the lives of military personnel.</p>
+
+          <p>While large-sized UUVs have large propulsion systems that allow for efficient and fast movement, 
+            small-sized UUVs need to maneuver in tight, small and often turbulent conditions with smaller batteries. 
+            Optimizing thrust generation and efficiency is critical and navigation systems that control UUV movement 
+            remain unoptimized. I proposed a new innovative machine learning approach to solve this problem, the 
+            algorithm I put together first determined the best possible route and then found the best combination 
+            of fin movements for desired combination of thrust generation and efficiency level. This has been 
+            historically difficult for any autonomous vehicle, as models must be fast enough to calculate live 
+            movement adjustments and small enough to use less power than they save; previous literature has 
+            attempted conventional navigation optimizations without incorporating ML approaches.</p>
+            
+          <p>Throughout my research at NRL, I collected a comprehensive dataset of physical underwater fin robotics 
+            movement data; to my knowledge, this dataset is the most comprehensive dataset spanning three fin 
+            material types across four variable ranges of possible movements. I utilized this data to demonstrate 
+            that we can create a fast and power-constrained model, that calculates the next optimal movement in under 
+            half a second based on desired metrics. As a result, I improved model accuracy by 98.15%, allowing us to 
+            save an average of 3 Watts of power for any movement (the full range is from 0-9W). In a further study, 
+            I demonstrated that machine learning can be an effective predictor of the physical outcome of any given 
+            movement pattern. This includes examples of the force generation and power consumption, which is useful 
+            for studies where datasets are small but span the full space of desired movement data. From this model, 
+            I developed dynamic power-saving and max-acceleration modes for the UUV, allowing us to prioritize 
+            various objectives as needed. The test platform that I utilized to gather data for flapping fin gait 
+            motion was created prior to when I arrived at NRL, but I was responsible for finding research literature 
+            and topics; modifying the platform to adapt for a variety of fins; selecting the gait combinations for 
+            data collection; and collecting all of the datasets myself over the span of the project.</p>
+            
+          <p>My research makes the small and inexpensive AUVs needed for any of those tasks faster and more energy 
+            efficient. With the computational power of a Raspberry Pi, the same robot can move larger ranges, 
+            opening the possibility for new applications. My code can be integrated into any existing AUV/UUV 
+            platform. Beyond underwater vehicles, demonstrating that small-sized machine learning works well for 
+            small, power-constrained systems has implications for other autonomous or self-driving technology. 
+            For example, the same concepts could be applied to unmanned aerial vehicles or small food delivery 
+            robots. My results are currently being published so that researchers/roboticists can build upon my 
+            work for their applications.</p>
+
+        </section>
+
 
         <!--
           - service
